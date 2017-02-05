@@ -1,16 +1,17 @@
 ###################################################################################
 # Dockerfile to build a Polymer Dev Environment container images with Polymer-CLI
-# Based on node:4-slim
-#
+# for Raspberry PI
+# Based on hypriot/rpi-node:6-slim and jefferyb/docker-polymer-cli
+#  
 # To build, do:
 #   $ docker build -t jefferyb/polymer-cli .
 #
 ###################################################################################
 
 # Set the base image to node:4-slim
-FROM node:4-slim
+FROM hypriot/rpi-node:6-slim
 
-MAINTAINER Jeffery Bagirimvano <jeffery.rukundo@gmail.com>
+MAINTAINER Elmar Wachtmeester <elmar@wachtmeestertjes.nl>
 
 ENV POLYMER_CLI_HOME /home/polymer
 ARG user=polymer
